@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+{
+	"name": "hello-rust-repo",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/nix:1": {
+			"packages": "mise"
+		}
+	},
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:/home/vscode/.nix-profile/bin",
+		"MISE_EXPERIMENTAL": "true",
+		"MISE_TRUSTED_CONFIG_PATHS": "${containerWorkspaceFolder}"
+	},
+	"onCreateCommand": {
+		"activate-mise-for-bash": "echo 'eval \"$(mise activate bash)\"' >> ~/.bashrc",
+		"activate-mise-for-zsh": "echo 'eval \"$(mise activate zsh)\"' >> ~/.zshrc",
+		"pre-install-mise": "mise install --yes rust cargo-binstall cargo-make"
+	},
+	"postCreateCommand": {
+		"post-install-mise": "mise install --yes"
+	}
+}

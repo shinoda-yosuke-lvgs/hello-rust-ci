@@ -1,0 +1,20 @@
+[config]
+skip_core_tasks = true
+
+[tasks.empty]
+private = true
+
+[tasks.end]
+private = true
+
+[tasks.init]
+private = true
+
+[tasks.default]
+args = ["make", "--list-all-steps"]
+clear = true
+command = "cargo"
+
+[tasks.format-toml]
+args = ["format"]
+command = "taplo"

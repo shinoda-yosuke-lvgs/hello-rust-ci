@@ -1,0 +1,7 @@
+[tools]
+cargo-binstall = "latest"
+cargo-make = "latest"
+"cargo:taplo-cli" = "latest"
+github-cli = "latest"
+rust = "latest"
+usage = "latest"
