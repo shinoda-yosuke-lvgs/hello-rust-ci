@@ -9,7 +9,7 @@
 		}
 	},
 	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:/home/vscode/.nix-profile/bin",
+		"PATH": "${containerEnv:PATH}:/home/vscode/.nix-profile/bin:/home/vscode/.local/share/mise/shims",
 		"MISE_EXPERIMENTAL": "true",
 		"MISE_TRUSTED_CONFIG_PATHS": "${containerWorkspaceFolder}"
 	},

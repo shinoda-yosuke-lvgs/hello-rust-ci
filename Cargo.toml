@@ -3,4 +3,12 @@ edition = "2021"
 name = "hello-rust-ci"
 version = "0.1.0"
 
+[[bin]]
+name = "not_formatted"
+path = "bin/not_formatted.rs"
+
+[[bin]]
+name = "failed_test"
+path = "bin/failed_test.rs"
+
 [dependencies]
